@@ -1,0 +1,26 @@
+*.iml
+.gradle
+/local.properties
+/.idea
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+/app/build
+/app/release
+
+# 临时下载的 JDK 和 SDK
+/jdk17/
+/jdk17.zip
+/cmdline-tools.zip
+/android_sdk/
+/android_sdk_tmp/
+
+# 临时脚本
+/download_jdk.ps1
+/download_sdk.ps1
+/extract_sdk.ps1
+/extract_sdk2.ps1
+/check_zip.ps1
