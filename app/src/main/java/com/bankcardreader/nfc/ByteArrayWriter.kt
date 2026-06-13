@@ -10,7 +10,7 @@ class ByteArrayWriter {
         chunks.add(bytes)
     }
 
-    fun write(bytes: ByteArray) {
+    fun writeBytes(bytes: ByteArray) {
         chunks.add(bytes)
     }
 

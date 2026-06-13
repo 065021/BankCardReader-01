@@ -355,7 +355,7 @@ object EmvReader {
 
             // 根据标签提供默认值
             val defaultValue = getPdolDefault(tagHex, length)
-            writer.write(defaultValue)
+            writer.writeBytes(defaultValue)
         }
 
         // 包装在标签 83 中
@@ -368,7 +368,7 @@ object EmvReader {
             result.write((0x80 or 0x01).toByte())
             result.write(rawData.size.toByte())
         }
-        result.write(rawData)
+        result.writeBytes(rawData)
         return result.toByteArray()
     }
 
@@ -422,7 +422,7 @@ object EmvReader {
         writer.write(cla, ins, p1.toByte(), p2.toByte())
         if (data.isNotEmpty()) {
             writer.write(data.size.toByte())
-            writer.write(data)
+            writer.writeBytes(data)
         }
         writer.write(0x00.toByte()) // Le
         return writer.toByteArray()
